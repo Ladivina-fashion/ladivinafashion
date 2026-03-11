@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>LADIVINA FASHION - روابطنا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* الألوان الملكية والفخمة */
+        :root {
+            --royal-burgundy: #3a0319; 
+            --velvet-plum: #1c0510;     
+            --rose-gold: #e0bfb8;      
+            --champagne: #f7e7ce;      
+            --text-light: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at top right, var(--royal-burgundy), var(--velvet-plum));
+            font-family: 'Cairo', sans-serif;
+            color: var(--text-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            perspective: 1500px; /* تفعيل البعد الثالث */
+        }
+
+        /* دخول فخم وسينمائي للموقع */
+        .container {
+            width: 100%;
+            max-width: 420px;
+            padding: 40px 20px;
+            text-align: center;
+            animation: royalEntrance 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            opacity: 0;
+            transform: rotateX(20deg) translateY(40px);
+        }
+
+        @keyframes royalEntrance {
+            to { opacity: 1; transform: rotateX(0deg) translateY(0); filter: blur(0); }
+        }
+
+        /* حاوية الشعار (اللوجو) */
+        .logo-container {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            border: 2px solid rgba(224, 191, 184, 0.6);
+            background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(0,0,0,0.2));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 30px rgba(224, 191, 184, 0.2), 
+                        inset 0 0 20px rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            animation: floatLogo 4s ease-in-out infinite;
+        }
+
+        /* حركة طفو ناعمة للشعار */
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .logo-placeholder img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 50%;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            color: var(--champagne);
+            letter-spacing: 2px;
+        }
+
+        /* نصوص العناوين */
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            margin: 0;
+            color: var(--champagne);
+            letter-spacing: 3px;
+            text-shadow: 2px 4px 15px rgba(0,0,0,0.6);
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: var(--rose-gold);
+            margin-bottom: 50px;
+            margin-top: 8px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        /* حاوية الأزرار الـ 3D */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            transform-style: preserve-3d;
+        }
+
+        /* تصميم الأزرار الزجاجية */
+        .link-btn {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 12px 25px;
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--champagne);
+            text-decoration: none;
+            font-size: 19px;
+            font-weight: 700;
+            border: 1px solid rgba(224, 191, 184, 0.2);
+            border-radius: 60px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 
+                        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            position: relative;
+            
+            /* تدرج في الظهور */
+            opacity: 0;
+            animation: slideIn3D 1s forwards;
+        }
+
+        /* تأخير ظهور الأزرار لتأثير درامي */
+        .link-btn:nth-child(1) { animation-delay: 0.4s; }
+        .link-btn:nth-child(2) { animation-delay: 0.6s; }
+        .link-btn:nth-child(3) { animation-delay: 0.8s; }
+        .link-btn:nth-child(4) { animation-delay: 1.0s; }
+
+        @keyframes slideIn3D {
+            0% { opacity: 0; transform: translateY(40px) rotateX(-20deg) scale(0.9); }
+            100% { opacity: 1; transform: translateY(0) rotateX(0deg) scale(1); }
+        }
+
+        /* === الأيقونات بشكل مجوهرات معدنية 3D === */
+        .icon-wrapper {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            /* تدرج معدني بلون الروز جولد */
+            background: linear-gradient(145deg, #f7e7ce, #d4a398);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* ظلال تعطي بروزاً كروياً 3D */
+            box-shadow:  5px 5px 10px rgba(0,0,0,0.4),
+                         -3px -3px 8px rgba(255, 255, 255, 0.2),
+                         inset 2px 2px 4px rgba(255, 255, 255, 0.8),
+                         inset -2px -2px 5px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255,255,255,0.4);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform: translateZ(10px); 
+        }
+
+        /* نحت الأيقونة داخل المعدن */
+        .icon-wrapper i {
+            font-size: 26px;
+            background: linear-gradient(to bottom, #3a0319, #1c0510);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(1px 1px 1px rgba(255,255,255,0.5));
+            transition: all 0.4s ease;
+        }
+
+        /* === تحريكات 3D فخمة جداً عند تمرير الماوس === */
+        .link-btn:hover {
+            transform: translateY(-8px) rotateX(15deg) rotateY(-8deg) scale(1.05);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(224, 191, 184, 0.6);
+            box-shadow: 15px 25px 35px rgba(0, 0, 0, 0.5), 
+                        -5px -5px 20px rgba(224, 191, 184, 0.15),
+                        inset 0 1px 2px rgba(255,255,255,0.3);
+        }
+
+        /* بروز الأيقونة (الجوهرة) أكثر عند التمرير */
+        .link-btn:hover .icon-wrapper {
+            transform: translateZ(30px) scale(1.1); 
+        }
+
+        /* تلوين الأيقونات المحفورة عند التمرير لتشع بوهج التطبيق الأصلي */
+        .link-btn.instagram:hover .icon-wrapper i { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; filter: drop-shadow(0 0 5px rgba(225, 48, 108, 0.8)); }
+        .link-btn.facebook:hover .icon-wrapper i { background: #1877F2; -webkit-background-clip: text; filter: drop-shadow(0 0 5px #1877F2); }
+        .link-btn.tiktok:hover .icon-wrapper i { background: #000000; -webkit-background-clip: text; filter: drop-shadow(2px 2px 2px #fe0979) drop-shadow(-2px -2px 2px #00f2fe); }
+        .link-btn.map:hover .icon-wrapper i { background: linear-gradient(135deg, #ff4d4d, #cc0000); -webkit-background-clip: text; filter: drop-shadow(0 0 5px #ff4d4d); }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo-placeholder">
+                <img src="logo.png" alt="Ladivina" onerror="this.style.display='none'; document.getElementById('logo-text').style.display='block';">
+                <span id="logo-text" class="logo-text" style="display:none;">LADIVINA</span>
+            </div>
+        </div>
+
+        <h1 class="brand-name">LADIVINA FASHION</h1>
+        <p class="tagline">لأرقى الأزياء النسائية واللمسات العصرية</p>
+
+        <div class="links-container">
+            
+            <a href="https://instagram.com/your_username" class="link-btn instagram" target="_blank">
+                <div class="icon-wrapper">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <span>انستغرام</span>
+            </a>
+
+            <a href="https://facebook.com/your_page" class="link-btn facebook" target="_blank">
+                <div class="icon-wrapper">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <span>فيسبوك</span>
+            </a>
+
+            <a href="https://tiktok.com/@your_username" class="link-btn tiktok" target="_blank">
+                <div class="icon-wrapper">
+                    <i class="fab fa-tiktok"></i>
+                </div>
+                <span>تيك توك</span>
+            </a>
+
+            <a href="https://maps.google.com/?q=your_location" class="link-btn map" target="_blank">
+                <div class="icon-wrapper">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <span>موقعنا على الخريطة</span>
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>
